@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+*.log
+www-built/
+# Built android artifacts - ignore only build artifacts, not the source
+android/app/build/
+android/.gradle/

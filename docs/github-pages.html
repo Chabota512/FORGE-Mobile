@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #00ff41;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            color: #888;
+        }
+        
+        .section {
+            background: #1a2332;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid #00ff41;
+        }
+        
+        .section h2 {
+            color: #00ff41;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 50px;
+            position: relative;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        
+        .steps li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #00ff41;
+            color: #0f172a;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .code-block {
+            background: #0f172a;
+            border: 1px solid #00ff41;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            color: #00ff41;
+        }
+        
+        .link-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #00ff41;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid #00ff41;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #00ff41;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #00ff41;
+            border: 2px solid #00ff41;
+        }
+        
+        .btn-secondary:hover {
+            background: #00ff41;
+            color: #0f172a;
+        }
+        
+        .info-box {
+            background: #0a1929;
+            border-left: 4px solid #00ff41;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .info-box strong {
+            color: #00ff41;
+        }
+        
+        footer {
+            text-align: center;
+            color: #666;
+            margin-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔨 Forge Mobile</h1>
+            <p class="subtitle">Automated builds with GitHub Actions</p>
+        </header>
+        
+        <div class="section">
+            <h2>📋 Setup Steps</h2>
+            <ol class="steps">
+                <li>
+                    <strong>Push Code to GitHub</strong>
+                    <div class="code-block">
+git add .<br>
+git commit -m "Forge mobile app"<br>
+git push origin main
+                    </div>
+                </li>
+                
+                <li>
+                    <strong>Enable GitHub Actions</strong>
+                    <p>Go to your repository → Settings → Actions → Allow all actions</p>
+                </li>
+                
+                <li>
+                    <strong>Wait for Build</strong>
+                    <p>Go to Actions tab and watch your first build complete (3-5 minutes)</p>
+                </li>
+                
+                <li>
+                    <strong>Download APK</strong>
+                    <p>Click the workflow run → Artifacts → Download APK</p>
+                </li>
+                
+                <li>
+                    <strong>Create Release (Optional)</strong>
+                    <div class="code-block">
+git tag v1.0.0<br>
+git push origin v1.0.0
+                    </div>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>🔄 How It Works</h2>
+            <p>Every time you push to main, GitHub automatically:</p>
+            <ul style="margin-left: 20px; margin-top: 15px; line-height: 2;">
+                <li>✓ Builds your web app</li>
+                <li>✓ Syncs with Capacitor</li>
+                <li>✓ Creates Android APK</li>
+                <li>✓ Saves as artifact (30 days)</li>
+                <li>✓ Creates release (if tagged)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>📦 Artifacts</h2>
+            <div class="info-box">
+                <strong>Debug APK:</strong> For testing on emulator/device (faster builds)
+                <br><br>
+                <strong>Release APK:</strong> For distribution (production builds)
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Next Steps</h2>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li>Read GITHUB_SETUP.md for detailed instructions</li>
+                <li>Check SETUP.md for local development</li>
+                <li>View README.md for quick start</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Forge • Automated Mobile App Builds</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">No local computer needed. Everything happens on GitHub.</p>
+        </footer>
+    </div>
+</body>
+</html>

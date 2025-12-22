@@ -30,7 +30,8 @@
                          "sonner":  "^1.2.0",
                          "recharts":  "^2.8.0",
                          "date-fns":  "^3.0.0",
-                         "framer-motion":  "^10.16.0"
+                         "framer-motion":  "^10.16.0",
+                         "jspdf":  "^2.5.1"
                      },
     "devDependencies":  {
                             "@capacitor/cli":  "8.0.0",

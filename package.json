@@ -32,7 +32,8 @@
                          "date-fns":  "^3.0.0",
                          "framer-motion":  "^10.16.0",
                          "jspdf":  "^2.5.1",
-                         "react-resizable-panels":  "^2.0.0"
+                         "react-resizable-panels":  "^2.0.0",
+                         "@radix-ui/react-popover":  "^1.0.0"
                      },
     "devDependencies":  {
                             "@capacitor/cli":  "8.0.0",

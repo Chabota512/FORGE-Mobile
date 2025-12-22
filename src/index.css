@@ -52,6 +52,7 @@ p {
 .api-status p {
   margin-bottom: 10px;
   text-align: left;
+  font-size: 0.9rem;
 }
 
 .api-status strong {
@@ -66,4 +67,14 @@ p {
 
 .api-status p:nth-child(3):contains('failed') {
   color: #dc3545;
+}
+
+.api-status p:nth-child(3):contains('limited') {
+  color: #ffc107;
+}
+
+.api-status p:nth-child(4) {
+  color: #dc3545;
+  font-size: 0.8rem;
+  word-break: break-word;
 }

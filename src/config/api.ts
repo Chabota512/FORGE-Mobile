@@ -1,4 +1,4 @@
-export const API_BASE_URL = 'https://forge-finals--naughtyrodentgf.replit.app';
+export const API_BASE_URL = 'https://forge-finals-1--joyousboarufg.replit.app';
 
 export const API_ENDPOINTS = {
   // Add your API endpoints here

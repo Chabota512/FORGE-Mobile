@@ -17,7 +17,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22.11.0'
+      
+      - name: Verify Node.js version
+        run: node --version && npm --version
+      
+      - name: Sync Capacitor
+        run: npx cap sync
       
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -27,9 +33,6 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-      
-      - name: Sync Capacitor
-        run: npx cap sync
       
       - name: Make gradlew executable
         run: chmod +x android/gradlew

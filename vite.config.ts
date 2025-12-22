@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [react()],
@@ -15,12 +15,12 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src/client/src"),
-      "@/components": path.resolve(__dirname, "./src/client/src/components"),
-      "@/pages": path.resolve(__dirname, "./src/client/src/pages"),
-      "@/lib": path.resolve(__dirname, "./src/client/src/lib"),
-      "@/contexts": path.resolve(__dirname, "./src/client/src/contexts"),
-      "@/hooks": path.resolve(__dirname, "./src/client/src/hooks"),
+      "@": fileURLToPath(new URL('./src/client/src', import.meta.url)),
+      "@/components": fileURLToPath(new URL('./src/client/src/components', import.meta.url)),
+      "@/pages": fileURLToPath(new URL('./src/client/src/pages', import.meta.url)),
+      "@/lib": fileURLToPath(new URL('./src/client/src/lib', import.meta.url)),
+      "@/contexts": fileURLToPath(new URL('./src/client/src/contexts', import.meta.url)),
+      "@/hooks": fileURLToPath(new URL('./src/client/src/hooks', import.meta.url)),
     },
   },
   publicDir: 'public',

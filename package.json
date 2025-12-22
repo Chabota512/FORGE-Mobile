@@ -29,7 +29,8 @@
                          "lucide-react":  "^0.294.0",
                          "sonner":  "^1.2.0",
                          "recharts":  "^2.8.0",
-                         "date-fns":  "^3.0.0"
+                         "date-fns":  "^3.0.0",
+                         "framer-motion":  "^10.16.0"
                      },
     "devDependencies":  {
                             "@capacitor/cli":  "8.0.0",
@@ -41,5 +42,6 @@
                             "autoprefixer":  "^10.4.0",
                             "postcss":  "^8.4.0",
                             "@types/node":  "^20.0.0"
-                        }
+                        },
+    "type":  "module"
 }

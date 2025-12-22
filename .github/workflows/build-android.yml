@@ -24,9 +24,18 @@ jobs:
       
       - name: Install project dependencies
         run: |
+          # Install core dependencies
           npm install
-          npm install -D vite typescript
+          
+          # Install React and related dependencies
+          npm install react react-dom
+          npm install -D @types/react @types/react-dom @vitejs/plugin-react typescript
+          
+          # Install Capacitor
           npm install -g @capacitor/cli @capacitor/core
+          
+          # Create necessary directories if they don't exist
+          mkdir -p src
       
       - name: Build web assets
         run: npm run build

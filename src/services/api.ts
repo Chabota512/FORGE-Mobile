@@ -1,4 +1,4 @@
-import { API_BASE_URL, API_ENDPOINTS } from '../config/api';
+import { API_BASE_URL } from '../config/api';
 
 class ApiService {
   private baseUrl: string;
